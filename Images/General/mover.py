@@ -17,6 +17,6 @@ def copy_images(src_directory, dst_directory):
             shutil.copy2(src_file, dst_file)  # copy2 preserves metadata
 
 # Example usage
-source_folder = "location"
+source_folder = "F:/HentaiGan"
 destination_folder = "F:/mainphotos"
 copy_images(source_folder, destination_folder)
