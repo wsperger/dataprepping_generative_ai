@@ -6,7 +6,7 @@ import importlib.util
 CONFIG_FILE = 'Images/labelling/helpers_config.txt'
 MODELS_DIR = 'Images/labelling/models'
 HELPERS_DIR = 'Images/labelling/annotation_helpers'
-IMAGES_DIR = 'F:/HentaiGan'
+IMAGES_DIR = 'F:/test'
 
 def clone_repository(repo_url, model_name):
     """
