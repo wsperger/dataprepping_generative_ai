@@ -1,3 +1,5 @@
+# This is the main file executing the labelling logic
+
 import os
 import subprocess
 import importlib.util

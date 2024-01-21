@@ -1,0 +1,94 @@
+<p align="left">
+  <img src="../../assets/images/prod_assets/Overview_logo_ps.png" alt="Overview Logo" style="float: left; width: 200px; margin-right: 20px;"/>
+  <strong>Project: Labelling for StyleGAN3 Preparation</strong><br/>
+  This project, named "Labelling," is designed to assist in the preparation of data for StyleGAN3 by generating a diverse set of annotations for images. The project is structured to process images and videos locally, using a variety of deep learning models for different types of annotations. All annotations are stored efficiently in an SQLite database, with the capability to handle batch commits.
+</p>
+
+## Overview
+This project, named "Labelling," is designed to assist in the preparation of data for StyleGAN3 by generating a diverse set of annotations for images. The project is structured to process images and videos locally, using a variety of deep learning models for different types of annotations. All annotations are stored efficiently in an SQLite database, with the capability to handle batch commits.
+
+## Project Structure
+
+```mermaid
+
+---
+title: Labelling Functionality
+---
+
+graph TD
+    A[labelling] -->|contains| B[main.py]
+    A -->|contains| C[db_utils.py]
+    A -->|contains| D[annotation_helpers]
+    D --> E[description.py]
+    D --> F[face_detection.py]
+    D --> G[emotion_detection.py]
+    D --> H[object_detection.py]
+    D --> I[clothes_detection.py]
+    D --> J[pose_estimation.py]
+    D --> K[additional_helpers]
+    A -->|contains| L[models]
+    A -->|contains| M[image_data_labels.db]
+Setup and Installation
+Dependencies
+Python 3.8+
+Libraries: torch, transformers, opencv-python, sqlite3, PIL, etc.
+Model-specific dependencies as per individual helper module requirements.
+Installation
+Clone the repository and navigate to the labelling directory.
+Install the required Python libraries using pip install -r requirements.txt.
+Download and place the necessary model files in the models/ directory.
+Usage
+Main Script (main.py):
+Coordinates the processing of images and videos.
+Calls helper functions from annotation_helpers/ to perform specific annotations.
+Stores annotation results in the SQLite database using db_utils.py.
+Database Utilities (db_utils.py):
+Handles all database-related operations.
+Includes functions to create tables, insert data, and manage batch commits.
+Annotation Helpers:
+Each helper module in annotation_helpers/ is responsible for a specific type of annotation.
+Helper modules can be individually activated in main.py as needed.
+Running the Script
+Run python main.py to start processing.
+Input the path to the image/video folder when prompted.
+The script will process each file, generate annotations, and store them in the database.
+Annotation Modules
+Description (description.py):
+Uses BLIP model for generating detailed image descriptions.
+Source: BLIP GitHub Repository
+Face Detection (face_detection.py):
+Implements face detection using libraries like OpenFace or InsightFace.
+Source: OpenFace GitHub, InsightFace GitHub
+Emotion Detection (emotion_detection.py):
+Uses DeepFace or FER for analyzing facial emotions.
+Source: DeepFace GitHub, FER GitHub
+Object Detection (object_detection.py):
+Incorporates models like YOLOv8 for object detection and labeling.
+Source: Ultralytics GitHub
+Clothes Detection (clothes_detection.py):
+Utilizes Mask R-CNN with DeepFashion dataset for clothing detection.
+Source: DeepFashion GitHub
+Pose Estimation (pose_estimation.py):
+Implements OpenPose or TensorFlow Lite's MoveNet for posture and pose estimation.
+Source: OpenPose GitHub, MoveNet TensorFlow Hub
+Note:
+
+Ensure compliance with legal and ethical standards, especially regarding facial recognition and emotion detection technologies.
+Database operations in db_utils.py are designed for efficiency and support batch processing.
+Batch size can be configured in main.py.
+Each batch of annotations is committed to the database once processed.
+The DINOv2 repository is included as a reference for future enhancements or additional functionality.
+css
+Copy code
+
+This README file incorporates the HTML for aligning the image to the left and wrapping the text around it. The rest of the content remains as you've provided, detailing the various components of your project. &#8203;``【oaicite:0】``&#8203;
+
+
+
+
+
+
+Message ChatGPT…
+
+
+ChatGPT can make mistakes. 

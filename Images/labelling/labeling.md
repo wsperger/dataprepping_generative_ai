@@ -1,4 +1,9 @@
-![Overview Logo](assets/images/prod_assets/Overview_logo_ps.png)
+<p align="left">
+  <img src="../../assets/images/prod_assets/Overview_logo_ps.png" alt="Overview Logo" style="float: left; width: 400px; margin-right: 20px;"/>
+  <strong>Project: Labelling for StyleGAN3 Preparation</strong><br/>
+  This project, named "Labelling," is designed to assist in the preparation of data for StyleGAN3 by generating a diverse set of annotations for images. The project is structured to process images and videos locally, using a variety of deep learning models for different types of annotations. All annotations are stored efficiently in an SQLite database, with the capability to handle batch commits.
+</p>
+
 
 
 # Project: Labelling for StyleGAN3 Preparation
