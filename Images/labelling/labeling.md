@@ -1,3 +1,6 @@
+![Overview Logo](assets/images/prod_assets/Overview_logo_ps.png)
+
+
 # Project: Labelling for StyleGAN3 Preparation
 
 ## Overview
