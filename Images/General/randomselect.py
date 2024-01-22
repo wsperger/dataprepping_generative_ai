@@ -2,7 +2,7 @@ import os
 import shutil
 import random
 
-def copy_random_images(source_dir, dest_dir, num_images=40000, extensions=['.jpg', '.jpeg', '.png']):
+def copy_random_images(source_dir, dest_dir, num_images=400, extensions=['.jpg', '.jpeg', '.png']):
     # List all files in the source directory
     all_files = os.listdir(source_dir)
 
@@ -21,7 +21,7 @@ def copy_random_images(source_dir, dest_dir, num_images=40000, extensions=['.jpg
         shutil.copy(os.path.join(source_dir, image), os.path.join(dest_dir, image))
 
 # Usage example
-source_directory = 'D:/Dataset/training'  # Replace with your source directory path
-destination_directory = 'D:/Dataset/randomtraining'  # Replace with your destination directory path
+source_directory = "F:/mainphotos"  # Replace with your source directory path
+destination_directory = "F:/test"  # Replace with your destination directory path
 
 copy_random_images(source_directory, destination_directory)
